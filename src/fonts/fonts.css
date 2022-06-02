@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'mainadamas';
+    src: url(stentiga.ttf);
+}
+@font-face {
+    font-family: 'secadamas';
+    src: url(vectro.otf);
+}
+.mainfont {
+    font-family: 'mainadamas';
+}
+.secondaryfont {
+    font-family: 'secadamas';
+}
