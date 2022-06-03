@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import cart from '../imgs/cartwidget.png'
+import cart from '../../imgs/cartwidget.png'
 function CartWidget() {
   return (
      <>

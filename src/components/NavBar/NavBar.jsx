@@ -3,7 +3,6 @@ import { Container, Nav, Navbar } from 'react-bootstrap'
 import '../../fonts/fonts.css'
 import CartWidget from './CartWidget';
 
-lalalalalal
 function NavBar() {
   return (
     <Navbar bg="dark" expand="lg" className='justify-content-center border-top border-5 border-danger'>
@@ -16,7 +15,7 @@ function NavBar() {
           <Nav.Link href="/category/pdb" className='text-light fs-5 pe-5 secondaryfont'>Pesas, Discos y Barras</Nav.Link>
           <Nav.Link href="/category/pyr" className='text-light fs-5 pe-5 secondaryfont'>Proteccion y Rehabilitacion</Nav.Link>
           <Nav.Link href="/category/mc" className='text-light fs-5 pe-5 secondaryfont'>Maquinas Cardiovasculares</Nav.Link>
-          <Nav.Link href="#link"><CartWidget /></Nav.Link>
+          <CartWidget />
         </Nav>
       </Navbar.Collapse>
     </Container>
