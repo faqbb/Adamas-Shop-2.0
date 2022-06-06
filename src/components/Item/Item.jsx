@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import '../../fonts/fonts.css'
 
 
-function Item( { image, nombre , desc, precio, stock, id }) {
+function Item( { image, nombre , desc, precio, stock, id, category }) {
   return (
           <Card style={{ width: '19rem' }} className='bg-secondary text-center'>
             <Card.Img variant="top" src= {image} />
@@ -19,7 +19,7 @@ function Item( { image, nombre , desc, precio, stock, id }) {
                 <Card.Text className='fs-6 secondaryfont'>
                   Disponibles = {stock}
                 </Card.Text>
-                <Link to={`/fpyy/${id}`}>
+                <Link to={`/${category}/${id}`}>
                   <button  className='btn btn-danger mainfont'> Ver mas</button>
                 </Link>
              </Card.Body>

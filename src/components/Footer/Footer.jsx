@@ -2,9 +2,9 @@ import React from 'react'
 import fonts from '../../fonts/fonts.css'
 function Footer() {
   return (
-    <div className='row justify-content-around bg-dark bottom-0'>
+    <div className='row justify-content-around bg-dark bottom-0 position-absolute w-100'>
         <div>
-            <ul className='d-flex m-0'>
+            <ul className='d-flex m-0 g-0 list-unstyled'>
                 <li className='px-3 pt-3'><img src='../src/imgs/wpp.png'className='img-fluid'></img></li>
                 <li className='px-3 pt-3'><img src='../src/imgs/ig.png'className='img-fluid'></img></li>
                 <li className='px-3 pt-3'><img src='../src/imgs/fb.png'className='img-fluid'></img></li>
