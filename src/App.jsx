@@ -5,6 +5,7 @@ import Banner from './components/Banner/Banner'
 import  NavBar  from './components/NavBar/NavBar'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer'
+import Footer from './components/Footer/Footer'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -13,9 +14,12 @@ function App() {
     <BrowserRouter>
       <Banner/>
       <NavBar/>
-      <Routes>
-        <Route path='/' element= { <ItemListContainer/> } />
-      </Routes>
+        <Routes>
+          <Route path='/' element= { <ItemListContainer/> } />
+          <Route path='/category/fpyy' element= { <ItemListContainer category={'fpyy'}/> } />
+          <Route path='/category/mm' element= { <ItemListContainer category={'mm'}/> } />
+        </Routes>
+      <Footer/>
     </BrowserRouter>
   )
 }

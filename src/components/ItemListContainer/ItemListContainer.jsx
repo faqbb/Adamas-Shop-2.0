@@ -1,23 +1,12 @@
-import React, { useState } from 'react'
-import { useEffect } from 'react'
-import { getFirestore, doc, getDoc, collection, getDocs} from 'firebase/firestore'
-import grabProds from '../../tools/tools'
+import React from 'react'
+import ItemList from '../ItemList/ItemList'
 
-function ItemListContainer() {
-    
-    const [products, setProducts] = useState([])
-        grabProds(setProducts)
-    
-
-
-
+function ItemListContainer({category}) {
+  console.log(category)
   return (
-      products.map((product) => {
-          return (
-            <div key={product.id}>{product.name}</div>
-          )
-        }
-      )
+      <div className='d-flex col-12 bg-dark justify-content-around'>  
+        <ItemList filter={category}/>
+      </div>
     )
 }
 
