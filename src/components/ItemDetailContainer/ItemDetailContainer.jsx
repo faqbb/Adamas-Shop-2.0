@@ -4,39 +4,41 @@ import { useState, useEffect } from 'react';
 import ItemDetail from '../ItemDetail/ItemDetail';
 import LoadingScreen from '../LoadingScreen/LoadingScreen';
 import grabProds from '../../tools/tools';
+import { collection, getDocs, getFirestore } from 'firebase/firestore';
 
 
 
 
 function ItemDetailContainer() {
     
-    const [prods, setProds] = useState([])
-    const [loading,setLoading] =useState(true)
+    const [itemfind, setItemfind] = useState(null)
     const { detailId } = useParams()
+    console.log(detailId)
 
-    let getProds = new Promise ((acep) => {
-        setTimeout(() => {
-          grabProds(setProds)
-            acep(prods)
-          }, 1000);
-    
-       })
-       useEffect(() => {
-          getProds
-         .catch((err)=> console.log(err))
-         .finally(()=>setLoading(false))
-       }, [])
 
-    const itemFind = prods.find(producto => producto.id === detailId)
+    const getProducts = async () => {
+      const db = getFirestore()
+      const queryCollection = collection(db, 'products')
+      const response = await getDocs(queryCollection)
+      const data = response.docs.map(product => ( { id: product.id, ...product.data() } ) )
+      const result = data.find(producto => producto.id === detailId);
+      setItemfind(result)    
+    }
     
+    
+    
+    useEffect( () => {
+          getProducts()
+       }, [detailId])
+
     
   return (
         <div className='d-flex justify-content-around bg-dark flex-wrap'>
-        { loading ? 
+        { !itemfind ? 
             <LoadingScreen/>
             :
             <ItemDetail 
-            prods={itemFind}
+            prods={itemfind}
             />
         }
     </div>
