@@ -4,7 +4,8 @@ import React, { createContext, useContext, useState } from 'react'
 
 const CartContextProvider = ({children}) =>{
     const [cartlist,setCartlist] = useState([])
-    function addtoCart(item){
+
+    function addtoCart(item) {
         setCartlist([
             ...cartlist,
             item
@@ -12,10 +13,14 @@ const CartContextProvider = ({children}) =>{
         console.log(cartlist)
     }
 
+const emptyCart = () => {
+    setCartlist([])
+}
     return (
         <CartContext.Provider value={ {
             cartlist,
-            addtoCart
+            addtoCart,
+            emptyCart
         }}>
             {children}
         </CartContext.Provider>

@@ -4,17 +4,19 @@ import ItemCount from '../ItemCount/ItemCount'
 import GotoCart from '../GotoCart/GotoCart';
 import { useCartContext } from '../../context/CartContext'
 
+
 function ItemDetail( {prods} ) {
   const [count, setCount] = useState();
-  const [inputType, setinputType] = useState('boton')
-  const {addtoCart, cartList} = useCartContext
+  const [inputType, setInputType] = useState('boton')
+  const {addtoCart, cartList} = useCartContext()
+  
 
-  function onAdd (cant) {
-    setCount(cant)
-    setinputType('input')
+  const onAdd = (cant) => {
     console.log(cant)
-    addtoCart(prods, count)
+    addtoCart( { ...prods, cantidad: cant } )
+    setInputType('line')
   }
+console.log(cartList)
 
   return (
       <div className='d-flex bg-secondary'>
