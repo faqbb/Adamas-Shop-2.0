@@ -31,7 +31,7 @@ function ItemList( {filter} ) {
                 :
                    prodsFil.map((product) => {
                          return (
-                               <div key={product.id} >  
+                               <div key={product.id} className='p-3' >  
                                <Item
                                    image={product.image}
                                    nombre={product.name}

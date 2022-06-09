@@ -19,7 +19,7 @@ function ItemDetail( {prods} ) {
   return (
       <div className='d-flex bg-secondary'>
         <div className='col-4  '><Image src={prods.image} alt='producto' className='img-fluid border border-4 border-danger rounded'/></div>
-        <div className='col-8 d-flex flex-column justify-content-between'>
+        <div className='col-8 d-flex flex-column justify-content-between text-center'>
           <div className='fs-1 mainfont text-light pt-5'> {prods.name}</div>
           <div className='fs-3 secondaryfont text-light'> {prods.desc}</div>
           <div className='fs-5 secondaryfont text-light'>Disponibilidad: {prods.stock}</div>

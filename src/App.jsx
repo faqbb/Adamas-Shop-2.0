@@ -9,7 +9,6 @@ import Footer from './components/Footer/Footer'
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <BrowserRouter>
@@ -19,6 +18,9 @@ function App() {
           <Route path='/' element= { <ItemListContainer/> } />
           <Route path='/category/fpyy' element= { <ItemListContainer category={'fpyy'}/> } />
           <Route path='/category/mm' element= { <ItemListContainer category={'mm'}/> } />
+          <Route path='/category/pdb' element= { <ItemListContainer category={'pdb'}/> } />
+          <Route path='/category/pyr' element= { <ItemListContainer category={'pyr'}/> } />
+          <Route path='/category/mc' element= { <ItemListContainer category={'mc'}/> } />
           <Route path='/:category/:detailId' element = {<ItemDetailContainer />} />
         </Routes>
       <Footer/>
