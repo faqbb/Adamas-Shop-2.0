@@ -10,4 +10,4 @@ function ItemListContainer({category}) {
     )
 }
 
-export default ItemListContainer
+export default React.memo(ItemListContainer)

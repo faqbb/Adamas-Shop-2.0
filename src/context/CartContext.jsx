@@ -28,4 +28,4 @@ const emptyCart = () => {
 }
 
 
-export default CartContextProvider
+export default React.memo(CartContextProvider)

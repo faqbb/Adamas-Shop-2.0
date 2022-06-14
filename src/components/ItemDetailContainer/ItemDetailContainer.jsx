@@ -33,4 +33,4 @@ function ItemDetailContainer() {
   )
 }
 
-export default ItemDetailContainer
+export default React.memo(ItemDetailContainer)

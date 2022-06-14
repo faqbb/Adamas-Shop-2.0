@@ -39,4 +39,4 @@ console.log(cartList)
   )
 }
 
-export default ItemDetail
+export default React.memo(ItemDetail)
