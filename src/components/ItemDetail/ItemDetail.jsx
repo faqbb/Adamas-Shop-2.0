@@ -6,13 +6,13 @@ import { useCartContext } from '../../context/CartContext'
 
 
 function ItemDetail( {prods} ) {
-  const [count, setCount] = useState();
   const [inputType, setInputType] = useState('boton')
   const {addtoCart, cartList} = useCartContext()
   
 
   const onAdd = (cant) => {
     console.log(cant)
+    console.log(prods)
     addtoCart( { ...prods, cantidad: cant } )
     setInputType('line')
   }
