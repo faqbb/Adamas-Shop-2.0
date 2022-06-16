@@ -13,14 +13,31 @@ const CartContextProvider = ({children}) =>{
         console.log(cartList)
     }
 
+
+
 const emptyCart = () => {
     setCartList([])
 }
+
+const removeItem =(id)=> {
+    setCartList(cartList.filter(prod => prod.id !== id ))
+}
+
+
+
+const totalPrice = () => {
+    return cartList.reduce((contador, prod) => contador + (prod.cantidad * prod.price) ,0)
+}
+
+
+
     return (
         <CartContext.Provider value={ {
             cartList,
             addtoCart,
-            emptyCart
+            emptyCart,
+            removeItem,
+            totalPrice
         }}>
             {children}
         </CartContext.Provider>

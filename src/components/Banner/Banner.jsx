@@ -7,7 +7,7 @@ const Banner = () => {
   return (
     <div className='bg-dark g-0 align-items-center justify-content-center d-flex'>
         <h1 className='fs-1 mainfont text-light'>ADAMAS</h1>
-          <Link to={'/'} className='text-center col-auto'><img src={logo} alt="logo" className='w-50' /></Link>
+          <Link to='/' className='text-center col-auto'><img src={logo} alt="logo" className='w-50' /></Link>
         <h2 className='fs-1 mainfont text-light'>SHOP</h2>
     </div>
   )

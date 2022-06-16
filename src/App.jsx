@@ -18,8 +18,8 @@ function App() {
         <Banner/>
           <NavBar/>
             <Routes>
-              <Route path='/' element= { <ItemListContainer/> } />
-              <Route path='/category/fpyy' element= { <ItemListContainer category={'fpyy'}/> } />
+              <Route exact path={'/'} element= { <ItemListContainer/> } />
+              <Route exact path='/category/fpyy' element= { <ItemListContainer category={'fpyy'}/> } />
               <Route path='/category/mm' element= { <ItemListContainer category={'mm'}/> } />
               <Route path='/category/pdb' element= { <ItemListContainer category={'pdb'}/> } />
               <Route path='/category/pyr' element= { <ItemListContainer category={'pyr'}/> } />
