@@ -5,7 +5,7 @@ function CartWidget() {
   return (
      <>
       <Link to={'/cart'}>
-        <img src={cart} className='w-25'></img>
+        <img src={cart} className='w-25 py-1'></img>
         
       </Link>
     </> 

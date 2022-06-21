@@ -11,12 +11,9 @@ function ItemDetail( {prods} ) {
   
 
   const onAdd = (cant) => {
-    console.log(cant)
-    console.log(prods)
-    addtoCart( { ...prods, cantidad: cant } )
+    addtoCart( { ...prods, quantity: cant } )
     setInputType('line')
   }
-console.log(cartList)
 
   return (
       <div className='d-flex bg-secondary'>

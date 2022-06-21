@@ -10,7 +10,6 @@ const CartContextProvider = ({children}) =>{
             ...cartList,
             item
         ])
-        console.log(cartList)
     }
 
 
@@ -26,7 +25,7 @@ const removeItem =(id)=> {
 
 
 const totalPrice = () => {
-    return cartList.reduce((contador, prod) => contador + (prod.cantidad * prod.price) ,0)
+    return cartList.reduce((contador, prod) => contador + (prod.quantity * prod.price) ,0)
 }
 
 

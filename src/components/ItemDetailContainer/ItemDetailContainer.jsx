@@ -12,7 +12,7 @@ function ItemDetailContainer() {
     
     const [itemfind, setItemfind] = useState(null)
     const { detailId } = useParams()
-    console.log(detailId)
+  
     
     
     useEffect( () => {
