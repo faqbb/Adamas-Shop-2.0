@@ -10,6 +10,12 @@
 
 ![](https://github.com/faqbb/Adamas-Shop-2.0/blob/master/src/imgs/nav.gif)
 
+La pagina principal muestra a todos los productos disponibles, para una busqueda mas especifica, la barra de navegacion 
+sirve de filtro para los productos segun su categoria. Una vez seleccionado un producto y su cantidad, se le enviara a un carrito
+el cual podras verificar mientras navegas y editar a tu gusto.
+Si estás contento con tu carrito, procede a terminar la compra.
+Para finalizar, se te pediran tus datos para asi generar una orden de compra.
+
 ## ¿Que recursos utiliza?
 
 La app esta hecha con el uso de la libreria de React de Javascript, esta enlazada a una base de datos en Firebase 
