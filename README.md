@@ -8,7 +8,7 @@
 
 ## ¿Como funciona?
 
-![](https://github.com/Adamas-Shop-2.0/src/imgs/nav.gif)
+![](https://github.com/faqbb/Adamas-Shop-2.0/blob/master/src/imgs/nav.gif)
 
 ##¿Que recursos utiliza?
 
