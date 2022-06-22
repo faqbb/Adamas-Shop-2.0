@@ -1,4 +1,4 @@
-#¡Bienvenidos!
+# ¡Bienvenidos!
 
 ## ¿Que es Adamas Shop?
 
@@ -10,7 +10,7 @@
 
 ![](https://github.com/faqbb/Adamas-Shop-2.0/blob/master/src/imgs/nav.gif)
 
-##¿Que recursos utiliza?
+## ¿Que recursos utiliza?
 
 La app esta hecha con el uso de la libreria de React de Javascript, esta enlazada a una base de datos en Firebase 
 y utiliza distintas mejoras para el estilo, principalmente Bootstrap, CSS y la libreria de SweetAlert.
