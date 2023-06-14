@@ -15,6 +15,7 @@ export const findProduct = async (setFindprop, detailProp) => {
         const response = await getDocs(queryCollection)
         const data = response.docs.map(product => ( { id: product.id, ...product.data() } ) )
         let result = data
+        console.log(result)
         if (filterProp) {
              result = data.filter(product => product.category == filterProp)
              setProdprop(result)

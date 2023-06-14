@@ -8,7 +8,7 @@ function ItemList( {filter} ) {
 
    useEffect(() => {
      getProducts(setProducts, filter)
-    }, [])
+    }, [filter])
    
   return (
         <>
